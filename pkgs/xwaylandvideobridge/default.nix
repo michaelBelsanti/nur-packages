@@ -1,6 +1,6 @@
-{ lib, mkDerivation, fetchFromGitLab, pkg-config, cmake, extra-cmake-modules, kpipewire, qtx11extras, ki18n, kwidgetsaddons, knotifications, kcoreaddons }:
+{ lib, stdenv, fetchFromGitLab, wrapQtAppsHook, pkg-config, cmake, extra-cmake-modules, kpipewire, qtx11extras, ki18n, kwidgetsaddons, knotifications, kcoreaddons, }:
 
-mkDerivation {
+stdenv.mkDerivation {
   name = "xwaylandvideobridge";
   version = "unstable";
 
@@ -12,7 +12,7 @@ mkDerivation {
     hash = "sha256-gfQkOIZegxdFQ9IV2Qp/lLRtfI5/g6bDD3XRBdLh4q0=";
   };
 
-  nativeBuildInputs = [ pkg-config cmake extra-cmake-modules ];
+  nativeBuildInputs = [ wrapQtAppsHook pkg-config cmake extra-cmake-modules ];
   buildInputs = [ kpipewire qtx11extras ki18n kwidgetsaddons knotifications kcoreaddons ];
 
   meta = with lib; {
