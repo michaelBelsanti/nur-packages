@@ -1,4 +1,4 @@
-{ fetchFromGitHub }:
+{fetchFromGitHub}:
 fetchFromGitHub {
   owner = "Lxtharia";
   repo = "minegrub-theme";

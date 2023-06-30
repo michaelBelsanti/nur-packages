@@ -1,20 +1,20 @@
-{ lib
-, rustPlatform
-, fetchFromGitHub
-, pkg-config
-, glib
-, gdk-pixbuf
-, pango
-, graphene
-, gtk4
+{
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+  pkg-config,
+  glib,
+  gdk-pixbuf,
+  pango,
+  graphene,
+  gtk4,
 }:
-
 rustPlatform.buildRustPackage rec {
   pname = "regreet";
   version = "2023-02-25";
 
-  nativeBuildInputs = [ pkg-config ];
-  buildInputs = [ glib gdk-pixbuf pango graphene gtk4 ];
+  nativeBuildInputs = [pkg-config];
+  buildInputs = [glib gdk-pixbuf pango graphene gtk4];
 
   src = fetchFromGitHub {
     owner = "rharish101";
@@ -29,7 +29,7 @@ rustPlatform.buildRustPackage rec {
     description = "Clean and customizable greeter for greetd";
     homepage = "https://github.com/rharish101/ReGreet";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ michaelBelsanti];
+    maintainers = with maintainers; [michaelBelsanti];
     platforms = platforms.linux;
   };
 }

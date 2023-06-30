@@ -5,20 +5,16 @@
 # Having pkgs default to <nixpkgs> is fine though, and it lets you use short
 # commands such as:
 #     nix-build -A mypackage
-
-{ pkgs ? import <nixpkgs> { } }:
-
+{pkgs ? import <nixpkgs> {}}:
 with pkgs; {
   # The `lib`, `modules`, and `overlay` names are special
-  lib = import ./lib { inherit pkgs; }; # functions
+  lib = import ./lib {inherit pkgs;}; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  latencyflex = callPackage ./pkgs/latencyflex { };
-  protonup-qt = callPackage ./pkgs/protonup-qt { };
-  catppuccin-kde = callPackage ./pkgs/catppuccin-kde { };
-  regreet = callPackage ./pkgs/regreet { };
-  framework-grub-theme = callPackage ./pkgs/framework-grub-theme { };
-  minegrub = callPackage ./pkgs/minegrub { };
-  xwaylandvideobridge = libsForQt5.callPackage ./pkgs/xwaylandvideobridge { };
+  latencyflex = callPackage ./pkgs/latencyflex {};
+  regreet = callPackage ./pkgs/regreet {};
+  framework-grub-theme = callPackage ./pkgs/framework-grub-theme {};
+  minegrub = callPackage ./pkgs/minegrub {};
+  xwaylandvideobridge = libsForQt5.callPackage ./pkgs/xwaylandvideobridge {};
 }
