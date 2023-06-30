@@ -20,6 +20,5 @@ with pkgs; {
   regreet = callPackage ./pkgs/regreet { };
   framework-grub-theme = callPackage ./pkgs/framework-grub-theme { };
   minegrub = callPackage ./pkgs/minegrub { };
-  vinegar = callPackage ./pkgs/vinegar { };
   xwaylandvideobridge = libsForQt5.callPackage ./pkgs/xwaylandvideobridge { };
 }
