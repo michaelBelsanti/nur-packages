@@ -12,9 +12,9 @@ with pkgs; {
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  latencyflex = callPackage ./pkgs/latencyflex {};
-  regreet = callPackage ./pkgs/regreet {};
   framework-grub-theme = callPackage ./pkgs/framework-grub-theme {};
+  latencyflex = callPackage ./pkgs/latencyflex {};
   minegrub = callPackage ./pkgs/minegrub {};
+  regreet = callPackage ./pkgs/regreet {};
   xwaylandvideobridge = libsForQt5.callPackage ./pkgs/xwaylandvideobridge {};
 }
