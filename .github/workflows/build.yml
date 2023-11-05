@@ -34,8 +34,8 @@ jobs:
         cachixName:
           - quasigod
         nixPath:
-          - nixpkgs=channel:nixos-unstable
-          - nixpkgs=channel:nixpkgs-unstable
+          # - nixpkgs=channel:nixos-unstable
+          # - nixpkgs=channel:nixpkgs-unstable
           - nixpkgs=channel:nixos-22.11
     runs-on: ubuntu-latest
     steps:
