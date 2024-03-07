@@ -16,5 +16,4 @@ with pkgs; {
   latencyflex = callPackage ./pkgs/latencyflex {};
   minegrub = callPackage ./pkgs/minegrub {};
   regreet = callPackage ./pkgs/regreet {};
-  xwaylandvideobridge = libsForQt5.callPackage ./pkgs/xwaylandvideobridge {};
 }
